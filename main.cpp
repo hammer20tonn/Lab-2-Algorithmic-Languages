@@ -248,10 +248,8 @@ void EditFunc(string name, string title[], Pipeline *pipelines, int *CommandCode
             return;
         }
         cout << endl;
-        cout << "for (int i = 0; i < size_; i++) {" << endl;
         for (int i = 0; i < size_; i++) {
             Logging("Installation name - "+Name, name);
-            cout << pipelines[i].Name << endl;
             if( remove( (pipelines[i].Name+".txt").c_str() ) != 0 ) {
                 Logging("Update name Error", name);
             } else {
@@ -308,10 +306,10 @@ void EditFunc(string name, string title[], Pipeline *pipelines, int *CommandCode
         }
     } else if(CommandCode4 == 7) {
         for (int i = 0; i < size_; i++) {
-            if( remove( (PipeLines[CommandCode3[i]].Name+".txt").c_str() ) != 0 ) {
+            if( remove( (pipelines[i].Name+".txt").c_str() ) != 0 ) {
                 Logging("Delete Error", name);
             } else {
-                Logging("Delete - "+PipeLines[CommandCode3[i]].Name, name);
+                Logging("Delete - "+pipelines[i].Name, name);
                 PipeLines.erase(PipeLines.begin() + CommandCode3[i]);
             }
         }
