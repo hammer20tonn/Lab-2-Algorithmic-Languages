@@ -1,2 +1,0 @@
-[2025-11-22 17:23:17] Create project - CompressStation2
-[2025-11-22 17:23:35] Create project - CompressedStation3
